@@ -38,6 +38,6 @@ char	*ft_strrchr(const char *s, int c)
 
 int main()
 {
-	 printf("%s\n",strrchr("yas\0in",'\0'));
-         printf("%s",ft_strrchr("yas\0in",'\0'));
+	 printf("%s\n",strrchr("ysasin",'s'));
+         printf("%s",ft_strrchr("ysasin",'s'));
 }

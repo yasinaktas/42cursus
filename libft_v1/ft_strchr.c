@@ -13,18 +13,10 @@
 char *ft_strchr(const char *s, int c)
 {
 	int		index;
-	//int		index2;
 
 	index = 0;
 	while ((unsigned char)s[index] != (unsigned char)c && s[index])
 		index++;
-	/*index2 = 0;
-	while (index2 < index)
-	{
-		if (!s[index2])
-			return (0);
-		index2++;
-	}*/
 	if ((unsigned char)s[index] == (unsigned char)c)
 		return (char *)(s + index);
 	return (0);
