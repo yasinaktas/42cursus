@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:25:07 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/20 20:27:20 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/23 14:45:24 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<stdio.h>
@@ -38,6 +38,6 @@ char	*ft_strrchr(const char *s, int c)
 
 int main()
 {
-	 printf("%s\n",strrchr("ysasin",'s'));
-         printf("%s",ft_strrchr("ysasin",'s'));
+	 printf("%s\n",strrchr("",'s'));
+         printf("%s",ft_strrchr("",'s'));
 }
