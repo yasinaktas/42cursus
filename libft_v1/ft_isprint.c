@@ -10,24 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(char *str)
+int	ft_isprint(int c)
 {
-	int		index;
-	char	ch;
+	unsigned char	ch;
 
-	index = 0;
-	while (str[index])
-	{
-		ch = str[index];
-		index++;
-		if (!(ch >= 32 && ch <= 126))
-			return 0;
-	}
-	return 1;
-}
-
-#include<stdio.h>
-int main(){
-	printf("%d",ft_isprint("asdfasf.324i6"));
-	printf("%d",ft_isprint("asdfsd\nfasdf"));
+	ch = (unsigned char)c;
+	if (!(ch >= 32 && ch <= 126))
+		return (0);
+	return (1);
 }

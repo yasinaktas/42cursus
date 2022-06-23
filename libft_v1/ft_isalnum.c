@@ -10,30 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char *str)
+int	ft_isalnum(int c)
 {
-	char	ch;
-	int		index;
+	unsigned char	ch;
 
-	index = 0;
-	while (str[index])
-	{
-		ch = str[index];
-		index++;
-		if ((ch >= 65 && ch <=90))
-			continue;
-		else if((ch >= 90 && ch <= 122))
-			continue;
-		else if((ch >= 48 && ch <= 57))
-			continue;
-		else
-			return 0;
-	}
-	return 1;
+	ch = (unsigned char)c;
+	if ((ch >= 65 && ch <=90))
+		return (1);
+	else if((ch >= 90 && ch <= 122))
+		return (1);		
+	else if((ch >= 48 && ch <= 57))
+		return (1);
+	return (0);
 }
 
 #include<stdio.h>
 int main(){
-	printf("%d",ft_isalnum("yasin1234"));
-	printf("%d",ft_isalnum("234sad.f"));
+	printf("%d - %d - %d",ft_isalnum('a'), ft_isalnum('1'), ft_isalnum('\0'));
 }

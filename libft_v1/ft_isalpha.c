@@ -10,25 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char *str)
+int	ft_isalpha(int c)
 {
-	int		index;
-	char	ch;
+	unsigned char	ch;
 
-	index = 0;
-	while (str[index])
-	{
-		ch = str[index];
-		if (!((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122)))
-			return 0;
-		index++;
-	}
-	return 1;
+	ch = (unsigned char)c;
+	if (!((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122)))
+		return (0);
+	return (1);
 }
 
 
 #include<stdio.h>
 int main(){
-	printf("%d",ft_isalpha("yasin"));
-	printf("%d",ft_isalpha("1asd"));
+	printf("%d",ft_isalpha('a'));
+	printf("%d",ft_isalpha('1'));
 }

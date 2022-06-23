@@ -10,24 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char *str)
+int	ft_isascii(int c)
 {
-	int		index;
-	char	ch;
+	unsigned char	ch;
 	
-	index = 0;
-	while (str[index])
-	{
-		ch = str[index];
-		index++;
-		if(!(ch >= 0 && ch <= 127))
-			return 0;
-	}
-	return 1;
-}
-
-#include<stdio.h>
-int main(){
-	printf("%d",ft_isascii("asdfsdf23.|\ndgh#ÿÿ§€¢"));
-	printf("%d",ft_isascii("asdfsadf1123."));
+	ch = (unsigned char)c;
+	if(!(ch >= 0 && ch <= 127))
+		return (0);
+	return (1);
 }

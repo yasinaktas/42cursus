@@ -10,24 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char *str)
+int	ft_isdigit(int c)
 {
-	int		index;
-	char	ch;
+	unsigned char	ch;
 
-	index = 0;
-	while (str[index])
-	{
-		ch = str[index];
-		if (!(ch >= 48 && ch <= 57))
-			return 0;
-		index++;
-	}
+	ch = (unsigned char)c;
+	if (!(ch >= 48 && ch <= 57))
+		return (0);
 	return 1;
 }
 
 #include<stdio.h>
 int main(){
-	printf("%d",ft_isdigit("1234a"));
-	printf("%d",ft_isdigit("1234"));
+	printf("%d",ft_isdigit('a'));
+	printf("%d",ft_isdigit('1'));
 }
