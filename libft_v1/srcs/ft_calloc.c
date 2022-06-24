@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:31:46 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 18:32:04 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/24 19:09:29 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	*ft_calloc(size_t count, size_t size)
 	if (!(dst = malloc(total)))
 		return (0);
 	ft_memset(dst, 0, total);
-	//ft_memset(dst,'a',total);
 	return (dst);
 }
 /*int main(){

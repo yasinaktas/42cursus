@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 21:45:56 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 18:41:16 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/24 19:13:44 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (!dst && !src)
 		return (0);
 	printf("%lu\n",(size_t)(dst - src));
-	if ((size_t)(dst - src) < len) // aradaki uzaklığa bak, lenden küçük mü? overflow olabilir // Sondan başla
+	if ((size_t)(dst - src) < len)
 	{
 		while (len > 0)
 		{
@@ -27,7 +27,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			len--;
 		}
 	}
-	else // baştan başla
+	else
 	{
 		index = 0;
 		while (index < len)

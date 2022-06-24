@@ -1,7 +1,7 @@
 .PHONY: all clean fclean re
 CC := gcc
 FLAG = -Wall -Wextra -Werror
-SRCS = ./srcs/
+SRCS = ./srcs/ft_strlen.c
 HEADER = ./includes/
 LIB = libft.a
 BIN = ${SRCS:.c=.o}

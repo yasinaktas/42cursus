@@ -6,13 +6,13 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:31:15 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 18:31:36 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/24 19:09:09 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_add_output(char const *str, int start, int end, char **out)
+static void	ft_add_output(char const *str, int start, int end, char **out)
 {
 	char	*temp;
 	int		index2;

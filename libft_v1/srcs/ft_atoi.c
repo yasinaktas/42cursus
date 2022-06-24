@@ -6,13 +6,13 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 19:32:28 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 18:29:33 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/24 19:07:43 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_is_space(char ch)
+static int	ft_is_space(char ch)
 {
 	if ((ch >= 9 && ch <= 13))
 		return (1);

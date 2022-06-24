@@ -6,13 +6,13 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:35:52 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 18:36:13 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/24 19:10:36 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_in_set(char ch, char const *set)
+static int	is_in_set(char ch, char const *set)
 {
 	int	index;
 
