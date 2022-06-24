@@ -1,16 +1,16 @@
-#include<string.h>
-#include<stdio.h>
-#include<stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/24 18:31:15 by yaaktas           #+#    #+#             */
+/*   Updated: 2022/06/24 18:31:36 by yaaktas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	ft_strlen(char **out)
-{
-	int		index;
-
-	index = 0;
-	while (out[index])
-		index++;
-	return (index);
-}
+#include "libft.h"
 
 void	ft_add_output(char const *str, int start, int end, char **out)
 {
@@ -54,10 +54,4 @@ char	**ft_split(char const *str, char c)
 	ft_add_output(str, start_index, index, output);
 	output[index_output + 1] = 0;
 	return (output);
-}
-
-
-int main(){
-
-
 }

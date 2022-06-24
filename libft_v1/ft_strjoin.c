@@ -1,15 +1,16 @@
-#include<stdlib.h>
-#include<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/24 18:35:01 by yaaktas           #+#    #+#             */
+/*   Updated: 2022/06/24 18:35:17 by yaaktas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	ft_strlen(const char *str)
-{
-	int	index;
-
-	index = 0;
-	while (str[index])
-		index++;
-	return (index);
-}
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -33,8 +34,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new_str[index] = '\0';
 	return (new_str);
 }
-
-int main(){
+/*int main(){
 
 	printf("%s",ft_strjoin(0,"aktas"));
-}
+}*/

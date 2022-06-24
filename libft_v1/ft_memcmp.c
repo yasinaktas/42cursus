@@ -1,5 +1,16 @@
-#include<string.h>
-#include<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/24 18:34:08 by yaaktas           #+#    #+#             */
+/*   Updated: 2022/06/24 18:34:20 by yaaktas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -18,10 +29,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (new_s1[index] - new_s2[index]);
 }
-
-int main(){
+/*int main(){
 
 	printf("%d\n",memcmp("","",0));
 	printf("%d",ft_memcmp("","",0));
 
-}
+}*/

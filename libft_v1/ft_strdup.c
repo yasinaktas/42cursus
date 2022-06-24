@@ -1,31 +1,16 @@
-#include<string.h>
-#include<stdlib.h>
-#include<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/24 18:34:28 by yaaktas           #+#    #+#             */
+/*   Updated: 2022/06/24 18:34:52 by yaaktas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	index;
-
-	index = 0;
-	while (str[index])
-		index++;
-	return (index);
-}
-
-void    *ft_memcpy(void *dst, const void *src, size_t n)
-  {
-          size_t  index;
- 
-          index = 0;
-          if (!dst && !src)
-                  return (0);
-          while (index < n)
-          {
-                  ((unsigned char *)dst)[index] = ((unsigned char *)src)[index];
-                  index++;
-          }
-          return (dst);
- }
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
@@ -36,10 +21,9 @@ char	*ft_strdup(const char *s1)
 	ft_memcpy(new_s1, s1, ft_strlen((char *)s1));
 	return (char *)(new_s1);
 }
-
-int main(){
+/*int main(){
 
 printf("%s\n",strdup("yasin"));
 printf("%s",ft_strdup("yasin"));
 
-}
+}*/

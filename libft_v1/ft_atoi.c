@@ -1,14 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 19:32:28 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/20 19:46:08 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/24 18:29:33 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_is_space(char ch)
 {
@@ -43,11 +45,10 @@ int	ft_atoi(const char *str)
 	}
 	return (number * multiplier);
 }
-
-#include<stdlib.h>
+/*#include<stdlib.h>
 #include<stdio.h>
 int main(){
 printf("%d",atoi("      2147483647f"));
 printf("%d",ft_atoi("     2147483647f"));
 
-}
+}*/

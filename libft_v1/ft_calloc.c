@@ -1,20 +1,16 @@
-#include<stdlib.h>
-#include<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/24 18:31:46 by yaaktas           #+#    #+#             */
+/*   Updated: 2022/06/24 18:32:04 by yaaktas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void    *ft_memset(void *dst, int ch, size_t len)
-{
-          size_t  index;
-          unsigned char* new_dst;
- 
-          index = 0;
-          new_dst = (unsigned char *)dst;
-          while (index < len)
-          {
-                  new_dst[index] = (unsigned char)ch;
-                  index++;
-          }
-          return dst;
-}
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -28,8 +24,7 @@ void	*ft_calloc(size_t count, size_t size)
 	//ft_memset(dst,'a',total);
 	return (dst);
 }
-
-int main(){
+/*int main(){
 
  char *str = ft_calloc(2,2);
  if(!str)
@@ -40,4 +35,4 @@ int main(){
 	index++;
  }
 
-}
+}*/

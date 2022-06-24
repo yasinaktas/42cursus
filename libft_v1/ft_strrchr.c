@@ -6,20 +6,11 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:25:07 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/20 20:27:20 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/24 18:27:09 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdio.h>
-#include<string.h>
-int	ft_strlen(char *str)
-{
-	int	index;
 
-	index = 0;
-	while (str[index])
-		index++;
-	return (index);
-}
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -35,9 +26,8 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-
-int main()
+/*int main()
 {
 	 printf("%s\n",strrchr("ysasin",'s'));
          printf("%s",ft_strrchr("ysasin",'s'));
-}
+}*/

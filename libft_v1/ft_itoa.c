@@ -1,6 +1,16 @@
-#include<stdlib.h>
-#include<stdio.h>
-#include<string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/24 18:36:42 by yaaktas           #+#    #+#             */
+/*   Updated: 2022/06/24 18:36:54 by yaaktas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_itoa(int n)
 {
@@ -31,9 +41,8 @@ char	*ft_itoa(int n)
 	}
 	return (str_nbr);
 }
-
-int main(){
+/*int main(){
 
 	printf("%s",ft_itoa(-2147483648));
 
-}
+}*/

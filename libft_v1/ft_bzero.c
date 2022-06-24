@@ -6,11 +6,11 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 17:06:42 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/20 17:20:55 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/24 18:25:35 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<string.h>
+#include "libft.h"
 
 void	ft_bzero(void *dst, size_t n)
 {
@@ -28,8 +28,7 @@ void	ft_bzero(void *dst, size_t n)
 	}
 	dst = (void *)new_dst;
 }
-
-#include<stdio.h>
+/*#include<stdio.h>
 #include<strings.h>
 int main(int ac, char** av){
 	ft_bzero(av[ac - 1],2);
@@ -43,4 +42,4 @@ int main(int ac, char** av){
 		}
 		index++;
 	}
-}
+}*/

@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/14 14:00:04 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 18:40:36 by yaaktas          ###   ########.fr       */
+/*   Created: 2022/06/24 18:38:15 by yaaktas           #+#    #+#             */
+/*   Updated: 2022/06/24 18:43:28 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	i;
-	size_t	j;
-
-	if (size <= ft_strlen(dest))
-		return (size + ft_strlen(src));
-	i = 0;
-	j = ft_strlen(dest);
-	while (src[i] != '\0' && j < size - 1)
-	{
-		dest[j] = src[i];
-		j++;
-		i++;
-	}
-	dest[j] = '\0';
-	return (ft_strlen(dest) + ft_strlen(&src[i]));
+	write (fd, &c, 1);
 }

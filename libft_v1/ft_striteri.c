@@ -1,4 +1,16 @@
-#include<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/24 18:37:32 by yaaktas           #+#    #+#             */
+/*   Updated: 2022/06/24 18:37:49 by yaaktas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_print(unsigned int index, char *str)
 {
@@ -16,9 +28,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		index++;
 	}
 }
-
-int main(){
+/*int main(){
 
 ft_striteri("yasin",ft_print);
 
-}
+}*/

@@ -1,34 +1,16 @@
-#include<string.h>
-#include<stdio.h>
-#include<stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/24 18:35:52 by yaaktas           #+#    #+#             */
+/*   Updated: 2022/06/24 18:36:13 by yaaktas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-
-int	ft_strlen(const char *str)
-{
-	int	index;
-
-	index = 0;
-	while (str[index])
-		index++;
-	return (index);
-}
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	char	*sub_str;
-	size_t	index;
-
-	if (!(sub_str = (char *)malloc(len)))
-		return (0);
-	index = 0;
-	while (index < len && s[start])
-	{
-		sub_str[index] = s[start];
-		index++;
-		start++;
-	}
-	return (sub_str);
-}
+#include "libft.h"
 
 int	is_in_set(char ch, char const *set)
 {
@@ -60,9 +42,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	return (ft_substr(s1, start, end - start + 1));
 }
-
-int main(){
+/*int main(){
 
 	printf("%s",ft_strtrim("yasinaktas","yas"));
 
-}
+}*/

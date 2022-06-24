@@ -1,15 +1,16 @@
-#include<string.h>
-#include<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/24 18:35:25 by yaaktas           #+#    #+#             */
+/*   Updated: 2022/06/24 18:35:42 by yaaktas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	index;
-
-	index = 0;
-	while (str[index])
-		index++;
-	return (index);
-}
+#include "libft.h"
 
 int	is_same(const char *s1, const char *s2, size_t start)
 {
@@ -41,10 +42,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-int main(){
+/*int main(){
 
 	printf("%s\n",strnstr("yasinaktas","k\0a",10));
 	printf("%s",ft_strnstr("yasinaktas","k\0a",10));
 
-}
+}*/

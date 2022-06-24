@@ -1,14 +1,16 @@
-#include<stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/24 18:37:02 by yaaktas           #+#    #+#             */
+/*   Updated: 2022/06/24 18:37:24 by yaaktas          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	ft_strlen(const char *str)
-{
-	int	index;
-
-	index = 0;
-	while (str[index])
-		index++;
-	return (index);
-}
+#include "libft.h"
 
 char	ft_change_char(unsigned int index, char ch)
 {
@@ -30,10 +32,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	return (new_str);
 }
-
-#include<stdio.h>
+/*#include<stdio.h>
 int main(){
 
 	printf("%s",ft_strmapi("aaaaaa",ft_change_char));
 
-}
+}*/

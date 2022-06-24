@@ -6,10 +6,12 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 16:05:46 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/20 17:05:51 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/24 18:27:50 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<string.h>
+
+#include "libft.h"
+
 void	*ft_memset(void *dst, int ch, size_t len)
 {
 	size_t	index;
@@ -24,9 +26,8 @@ void	*ft_memset(void *dst, int ch, size_t len)
 	}
 	return dst;
 }
-
-#include<stdio.h>
+/*#include<stdio.h>
 #include<stdlib.h>
 int main(int ac, char **av){
 printf("%s",ft_memset(av[ac - 1],'a',4));
-}
+}*/

@@ -6,9 +6,11 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 19:56:01 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/23 14:43:14 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/24 18:30:33 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char *ft_strchr(const char *s, int c)
 {
@@ -21,11 +23,10 @@ char *ft_strchr(const char *s, int c)
 		return (char *)(s + index);
 	return (0);
 }
-
-#include<stdio.h>
+/*#include<stdio.h>
 #include<string.h>
 int main()
 {
 	printf("%s\n",strchr("",'a'));
 	printf("%s",ft_strchr("",'a'));
-}
+}*/
