@@ -6,17 +6,14 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 10:47:05 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 18:26:30 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/24 20:50:46 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
-{
-	unsigned char	ch;
-
-	ch = (unsigned char)c;
+int	ft_isdigit(int ch)
+{	
 	if (!(ch >= 48 && ch <= 57))
 		return (0);
 	return 1;

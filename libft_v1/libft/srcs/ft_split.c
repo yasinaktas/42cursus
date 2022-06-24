@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:31:15 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 20:33:26 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 00:47:02 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ char	**ft_split(char const *str, char c)
 	int		index_output;
 	int		start_index;
 
+	if (!str)
+		return (0);
 	output = (char **)malloc(1024 * 16);
 	index = 0;
 	index_output = 0;

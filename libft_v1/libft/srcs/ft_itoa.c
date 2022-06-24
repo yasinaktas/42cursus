@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:36:42 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 20:35:00 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 00:31:00 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_itoa(int n)
 	char	*str_nbr;
 	int	index;
 
-	if (!(str_nbr = (char *)malloc(1111)))
+	if (!(str_nbr = (char *)malloc(1024 * 16)))
 		return (0);
 	index = 0;
 	nbr = n;
@@ -38,6 +38,7 @@ char	*ft_itoa(int n)
 		multiplier = multiplier / 10;
 		index++;
 	}
+	str_nbr[index] = '\0';
 	return (str_nbr);
 }
 /*int main(){

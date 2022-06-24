@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 19:32:28 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 19:07:43 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 01:04:47 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_atoi(const char *str)
 {
 	int		index;
 	int		multiplier;
-	int		number;
+	long		number;
 
 	index = 0;
 	multiplier = 1;
@@ -48,7 +48,7 @@ int	ft_atoi(const char *str)
 /*#include<stdlib.h>
 #include<stdio.h>
 int main(){
-printf("%d",atoi("      2147483647f"));
-printf("%d",ft_atoi("     2147483647f"));
+printf("%d\n",atoi("      9223372036854775899"));
+printf("%d",ft_atoi("     9223372036854775899"));
 
 }*/
