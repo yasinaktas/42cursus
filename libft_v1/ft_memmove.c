@@ -6,17 +6,19 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 21:45:56 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 15:36:40 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/24 16:01:42 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<string.h>
+#include<stdio.h>
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	index;
 
 	if (!dst && !src)
 		return (0);
-	if ((size_t)(src - dst) > len) // aradaki uzaklığa bak, lenden küçük mü? overflow olabilir // Sondan başla
+	printf("%lu\n",(size_t)(dst - src));
+	if ((size_t)(dst - src) < len) // aradaki uzaklığa bak, lenden küçük mü? overflow olabilir // Sondan başla
 	{
 		while (len > 0)
 		{
@@ -36,7 +38,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
-#include<stdio.h>
 int main()
 {
         char str[] = "123456789";
