@@ -32,7 +32,7 @@ int main()
 	char str[] = "123456789";
 	char str2[] = "abcdefghj";
 	char str3[] = "klmnoprst";
-	printf("%s\n",(char *)ft_memcpy(str+5,str+4,5));
-	printf("%s\n",(char *)ft_memcpy(str2+5, str2+4,5));
-	printf("%s",(char *)ft_memcpy(str3+5, str3+4,5));
+	printf("%s\n",(char *)ft_memcpy(str,str,5));
+	printf("%s\n",(char *)memcpy(str2,str2,5));
+	printf("%s",(char *)memmove(0, str3,5));
 }
