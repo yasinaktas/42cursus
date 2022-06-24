@@ -6,11 +6,21 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:31:15 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 19:09:09 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/24 20:33:26 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_strlen_out(char **out)
+{
+	int		index;
+
+	index = 0;
+	while (out[index])
+		index++;
+	return (index);
+}
 
 static void	ft_add_output(char const *str, int start, int end, char **out)
 {
@@ -27,7 +37,7 @@ static void	ft_add_output(char const *str, int start, int end, char **out)
 	}
 	temp[index2] = '\0';
 	if (index2 != 0)
-		out[ft_strlen(out)] = temp;
+		out[ft_strlen_out(out)] = temp;
 }
 
 char	**ft_split(char const *str, char c)

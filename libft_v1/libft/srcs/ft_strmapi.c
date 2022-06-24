@@ -6,16 +6,11 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:37:02 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 19:11:53 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/24 20:34:29 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static char	ft_change_char(unsigned int index, char ch)
-{
-	return (ch + index);
-}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

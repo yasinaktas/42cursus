@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:36:42 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 18:36:54 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/24 20:35:00 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ char	*ft_itoa(int n)
 		multiplier *= 10;
 	while (multiplier >= 1)
 	{
-		printf("%ld - %ld\n",nbr,multiplier);
 		str_nbr[index] = (char)((nbr / multiplier) + '0');
 		nbr = nbr % multiplier;
 		multiplier = multiplier / 10;
