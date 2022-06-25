@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 19:32:28 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/25 17:03:52 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 17:14:45 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,6 @@ int	ft_atoi(const char *str)
 		number = number * 10 + str[index] - 48;
 		index++;
 	}
-	if (number * multiplier > 9223372036854775807)
-		return (-1);
-	else if ()
 	return (number * multiplier);
 }
 /*#include<stdlib.h>
