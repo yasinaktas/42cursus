@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:26:30 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 20:51:18 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 11:45:37 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isascii(int ch)
 {
-	if(!(ch >= 0 && ch <= 127))
+	if (!(ch >= 0 && ch <= 127))
 		return (0);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:35:52 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/25 00:39:59 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 12:02:05 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ static int	is_in_set(char ch, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	start;
-	int	end;
+	int		start;
+	int		end;
 	char	*s2;
-	int	tmp;
+	int		tmp;
 
 	if (!s1 || !set)
 		return (0);
@@ -47,7 +47,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start = end;
 		end = tmp;
 	}
-	if (!(s2 = (char *)malloc(end - start + 1)))
+	s2 = (char *)malloc(end - start + 1);
+	if (!s2)
 		return (0);
 	return (ft_substr(s1, start, end - start + 1));
 }
