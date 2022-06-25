@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:39:53 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 18:40:08 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 12:03:35 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	int	index;
 
 	if (!s)
-		return;
+		return ;
 	index = 0;
 	while (s[index])
 	{

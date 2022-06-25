@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 19:32:28 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/25 01:04:47 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 11:39:08 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_atoi(const char *str)
 {
 	int		index;
 	int		multiplier;
-	long		number;
+	long	number;
 
 	index = 0;
 	multiplier = 1;

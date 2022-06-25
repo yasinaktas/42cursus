@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:36:22 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/25 00:11:10 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 12:03:06 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*sub_str;
 	size_t	index;
 
-	if (!(sub_str = (char *)malloc(len + 1)))
+	sub_str = (char *)malloc(len + 1);
+	if (!sub_str)
 		return (0);
 	if (ft_strlen(s) < start)
 	{

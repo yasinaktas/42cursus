@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:31:15 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/25 00:47:02 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 11:55:09 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void	ft_add_output(char const *str, int start, int end, char **out)
 
 char	**ft_split(char const *str, char c)
 {
-	char		**output;
+	char	**output;
 	int		index;
 	int		index_output;
 	int		start_index;

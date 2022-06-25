@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 13:44:45 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 18:28:05 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 11:59:36 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ size_t	ft_strlen(const char *str)
 	index = 0;
 	while (str[index])
 		index++;
-	return index;
+	return (index);
 }

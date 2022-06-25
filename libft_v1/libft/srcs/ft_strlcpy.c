@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 13:55:29 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 22:57:49 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 11:59:23 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	size_t	index = 0;
+	size_t	index;
 
+	index = 0;
 	if (size == 0)
 		return (ft_strlen(src));
 	while (index < size - 1 && src[index] != '\0')

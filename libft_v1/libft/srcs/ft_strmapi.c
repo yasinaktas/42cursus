@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:37:02 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/25 00:42:21 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 12:00:30 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	index;
-	char		*new_str;
+	char			*new_str;
 
 	if (!s)
 		return (0);
-	if (!(new_str = (char *)malloc(ft_strlen(s) + 1)))
+	new_str = (char *)malloc(ft_strlen(s) + 1);
+	if (!new_str)
 		return (0);
 	index = 0;
 	while (s[index])

@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:35:25 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 23:40:14 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 12:00:53 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t h;
-	size_t n;
+	size_t	h;
+	size_t	n;
 
 	h = 0;
 	if (needle[0] == '\0')

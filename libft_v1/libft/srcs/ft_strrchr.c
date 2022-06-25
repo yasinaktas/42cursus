@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 20:25:07 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/25 00:01:46 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 12:01:14 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strrchr(const char *s, int c)
 	if (index >= 0)
 	{
 		if ((unsigned char)s[index] == (unsigned char)c)
-			return (char *)(s + index);
+			return ((char *)(s + index));
 	}
 	return (0);
 }

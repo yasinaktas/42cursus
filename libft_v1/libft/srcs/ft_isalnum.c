@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:12:21 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/24 20:56:41 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 11:44:59 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,6 @@ int	ft_isalnum(int ch)
 	if (ft_isalpha(ch) || ft_isdigit(ch))
 		return (1);
 	return (0);
-	/*if ((ch >= 65 && ch <= 90))
-		return (1);
-	if ((ch >= 90 && ch <= 122))
-		return (1);		
-	if ((ch >= 48 && ch <= 57))
-		return (1);
-	return (0);*/
 }
 
 /*#include<stdio.h>

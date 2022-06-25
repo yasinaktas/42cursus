@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:36:42 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/25 00:31:00 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 11:47:38 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@ char	*ft_itoa(int n)
 	long	nbr;
 	long	multiplier;
 	char	*str_nbr;
-	int	index;
+	int		index;
 
-	if (!(str_nbr = (char *)malloc(1024 * 16)))
+	str_nbr = (char *)malloc(1024 * 16);
+	if (!str_nbr)
 		return (0);
 	index = 0;
 	nbr = n;
