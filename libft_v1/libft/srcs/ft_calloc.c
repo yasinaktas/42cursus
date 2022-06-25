@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:31:46 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/25 21:09:58 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 21:38:12 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	*ft_calloc(size_t count, size_t size)
 	long	total;
 	void	*dst;
 
-	total = count * size;
-	if (count == (size_t)18446744073709551615 && size == (size_t)18446744073709551615)
+	if (count == SIZE_MAX && size == SIZE_MAX)
 		return (0);
+	total = count * size;
 	dst = malloc(total);
 	if (!dst)
 		return (0);
