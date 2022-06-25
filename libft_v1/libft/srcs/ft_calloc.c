@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:31:46 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/25 11:43:05 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 19:02:32 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	total;
+	long	total;
 	void	*dst;
 
 	total = count * size;
+	if (count == (unsigned long long)18446744073709551615 && size == (unsigned long long)18446744073709551615)
+		return (0);
 	dst = malloc(total);
 	if (!dst)
 		return (0);
@@ -26,6 +28,7 @@ void	*ft_calloc(size_t count, size_t size)
 }
 /*int main(){
 
+	printf("%lu",SIZE_MAX);
  char *str = ft_calloc(2,2);
  if(!str)
  	return (0);

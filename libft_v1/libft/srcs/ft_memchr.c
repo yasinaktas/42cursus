@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:32:44 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/25 16:58:24 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 18:34:09 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,21 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t			index;
-	unsigned char	*new_s;
+	size_t	index;
 
 	index = 0;
-	new_s = (unsigned char *)s;
-	while (index < n && index < ft_strlen((char *)new_s))
-	{
-		if (new_s[index] == (unsigned char)c)
-			return ((void *)(s + index));
+	while (*((unsigned char *)s + index) != (unsigned char)c && index < n)
 		index++;
-	}
-	if (new_s[index] == (unsigned char)c && index < n)
+	if (index < n)
 		return ((void *)(s + index));
 	return (0);
 }
 /*int main(){
 
-	printf("%s\n",(char *)memchr("y\0asin",'\0',3));
-	printf("%s",(char *)ft_memchr("y\0asin",'\0',3));
+	char s[] = {0, 1, 2 ,3 ,4 ,5};
+	char s2[] = {0, 1, 2 ,3 ,4 ,5};
+
+	printf("%s\n",(char *)memchr(s,2,3));
+	printf("%s",(char *)ft_memchr(s2,2,3));
 
 }*/
