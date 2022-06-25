@@ -6,28 +6,30 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:31:15 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/25 22:11:36 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/25 23:37:28 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	out_length(char const *str, char c)
+static int	out_length(const char *str, char c)
 {
-	int	count;
-	int	index;
+	int index;
+	int is_new_word;
 
-	count = 0;
 	index = 0;
-	while (str[index])
+	is_new_word = 0;
+	while (*str)
 	{
-		if (str[index + 1] == c && str[index] != c)
-			count++;
-		else if (str[index + 1] != c && str[index] == c)
-			count++;
-		index++;
+		if (*str != c && is_new_word == 0)
+		{
+			is_new_word = 1;
+			index++;
+		}
+		else if (*str == c)
+			is_new_word = 0;
+		str++;
 	}
-	index++;
 	return (index);
 }
 
@@ -38,7 +40,9 @@ char	**ft_split(char const *str, char c)
 	unsigned int	end;
 	int				output_index;
 
-	output = (char **)malloc(sizeof(*output) * out_length(str, c));
+	if (!str)
+		return (0);
+	output = (char **)malloc(sizeof(*output) * (out_length(str, c) + 1));
 	if (!str || !output)
 		return (0);
 	start = 0;
