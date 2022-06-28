@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 17:06:42 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/25 11:41:55 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/26 13:17:59 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,8 @@
 
 void	ft_bzero(void *dst, size_t n)
 {
-	size_t			index;
-	unsigned char	*new_dst;
-
-	index = 0;
-	new_dst = (unsigned char *) dst;
-	if (n == 0)
-		return ;
-	while (index < n)
-	{
-		new_dst[index] = '\0';
-		index++;
-	}
-	dst = (void *)new_dst;
+	if (n != 0)
+		ft_memset(dst, '\0', n);
 }
 /*#include<stdio.h>
 #include<strings.h>

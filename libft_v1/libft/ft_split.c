@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:31:15 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/25 23:37:28 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/26 09:57:07 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	out_length(const char *str, char c)
 {
-	int index;
-	int is_new_word;
+	int		index;
+	int		is_new_word;
 
 	index = 0;
 	is_new_word = 0;
@@ -40,8 +40,6 @@ char	**ft_split(char const *str, char c)
 	unsigned int	end;
 	int				output_index;
 
-	if (!str)
-		return (0);
 	output = (char **)malloc(sizeof(*output) * (out_length(str, c) + 1));
 	if (!str || !output)
 		return (0);

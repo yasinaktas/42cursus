@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:35:01 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/25 14:28:37 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/26 12:41:29 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		index;
 	int		index2;
 
-	if (!s1 || !s2)
+	if (!s1 && !s2)
 		return (0);
 	new_str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!new_str)

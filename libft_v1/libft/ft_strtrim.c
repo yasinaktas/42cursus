@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/24 18:35:52 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/25 21:47:24 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/26 13:13:48 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		start;
 	int		end;
-	//char	*s2;
-	int		tmp;
 
 	if (!s1 || !set)
 		return (0);
@@ -41,15 +39,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	while (is_in_set(s1[end], set))
 		end--;
-	if (start > end)
-	{
-		tmp = start;
-		start = end;
-		end = tmp;
-	}
-	/*s2 = (char *)malloc(end - start + 1);
-	if (!s2)
-		return (0);*/
 	return (ft_substr(s1, start, end - start + 1));
 }
 /*int main(){
