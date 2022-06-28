@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 15:45:51 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/06/28 18:36:17 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/06/28 19:39:49 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,24 +26,41 @@ char	*get_next_line(int fd)
 	char		*str;
 	int			index;
 
-	if (fd < 0)
-		return (0);
-	if (fd > 3)
-		return (0);
-	last_fd = 0;
 	index = 0;
+	str = (char *)malloc(1024 * 16);
+	if (read(fd, &c, 1) <= 0)
+	{
+		free (str);
+		return (0);
+	}
+	else
+	{
+		if (!c)
+		{
+			free(str);
+			return (0);
+		}
+		str[index] = c; 
+		if (c == '\n')
+			return (str);
+		index++;
+	}
+	last_fd = -1;
 	if (last_fd != fd)
 	{
 		last_fd = fd;
-		c = ' ';
 	}
-	str = (char *)malloc(1024 * 216); // Sonra hallet
 	while (read(fd, &c, 1))
 	{
 		str[index] = c;
 		index++;
 		if (c == '\n' || c == '\0')
 			break;
+	}
+	if (index == 0)
+	{
+		free (str);
+		return (0);
 	}
 	return (str);
 }
