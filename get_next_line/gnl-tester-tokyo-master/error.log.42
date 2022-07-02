@@ -1,0 +1,1 @@
+[test 54] ASSERT_EQ_STR failed: "9012" is not equal to expected "(null)"func gnl at file srcs/main.c, line 18
