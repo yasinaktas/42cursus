@@ -6,7 +6,7 @@
 /*   By: yaaktas <yaaktas@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 11:23:46 by yaaktas           #+#    #+#             */
-/*   Updated: 2022/07/02 13:57:07 by yaaktas          ###   ########.fr       */
+/*   Updated: 2022/07/03 11:48:27 by yaaktas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,15 @@ size_t	ft_strlen(const char *str)
 	return (index);
 }
 
-char	*ft_strjoin(char const *s1, char const *s2, char *new_str)
+char	*ft_strjoin(char *s1, char *s2, int length)
 {
+	char	*new_str;
 	int		index;
 	int		index2;
 
 	if (!s1 && !s2)
 		return (0);
+	new_str = (char *)malloc(ft_strlen(s1) + length + 1);
 	index = 0;
 	while (s1[index])
 	{
@@ -37,12 +39,12 @@ char	*ft_strjoin(char const *s1, char const *s2, char *new_str)
 	}
 	index2 = 0;
 	while (s2[index2])
-	{
-		new_str[index] = s2[index2];
-		index++;
-		index2++;
-	}
+		new_str[index++] = s2[index2++];
 	new_str[index] = '\0';
+	free (s1);
+	s1 = 0;
+	s1 = (char *)calloc(ft_strlen(new_str) + 1, sizeof(char));
+	ft_memmove((void *)s1, (void *)new_str, ft_strlen(new_str));
 	return (new_str);
 }
 
@@ -99,37 +101,21 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
-void    *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-    long		total;
-    void		*dst;
+	long		total;
+	void		*dst;
 	long		index;
 
 	index = 0;
-    total = count * size;
-    dst = malloc(total);
-    if (!dst)
-        return (0);
-    while (index < total)
+	total = count * size;
+	dst = malloc(total);
+	if (!dst)
+		return (0);
+	while (index < total)
 	{
 		*(unsigned char *)(dst + index) = 0;
 		index++;
 	}
-    return (dst);
-}
-
-void	move(char *str)
-{
-	int		len;
-	int		nl_idx;
-
-	len = ft_strlen(str);
-	nl_idx = nl_index(str);
-	if (nl_idx == -1)
-		*str = 0;
-	else
-	{
-		ft_memmove(str, str + nl_idx + 1, len - nl_idx + 1);
-		str[len - nl_idx] = 0;
-	}
+	return (dst);
 }
